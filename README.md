@@ -1,5 +1,10 @@
 # WAX Delphi Oracle - Price feed
 
+## Price feeds
+
+- Bittrex: [WAXP/USD](https://api.bittrex.com/v3/markets/WAXP-USD/ticker)
+- Bittrex: [WAXP/BTC](https://api.bittrex.com/v3/markets/WAXP-BTC/ticker)
+
 ## `.env` settings
 
 ```bash
