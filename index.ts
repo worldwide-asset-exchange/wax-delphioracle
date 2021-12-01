@@ -5,11 +5,9 @@ import { transact } from "./src/utils";
 import { api, ACCOUNT, AUTHORIZATION } from "./src/config";
 
 new CronJob("* * * * *", async () => {
-    const btc = await get_ticker("WAXP-BTC");
     const usd = await get_ticker("WAXP-USD");
 
     const quotes: Quote[] = [
-        { pair: "waxpbtc", value: to_uint(btc.lastTradeRate, 8)},
         { pair: "waxpusd", value: to_uint(usd.lastTradeRate, 4)}
     ]
     await transact( api, [ write( ACCOUNT, quotes, [ AUTHORIZATION ] )]);
