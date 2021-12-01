@@ -19,6 +19,6 @@
     "cron": "*",
     "dotenv": "*",
     "eosjs": "^21.0.1-rc1",
-    "node-fetch": "*"
+    "node-fetch": "^2.0.0"
   }
 }

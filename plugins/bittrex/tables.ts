@@ -10,7 +10,7 @@ interface Ticker {
 export async function get_ticker( ticker: string ): Promise<Ticker> {
     const url = `https://api.bittrex.com/v3/markets/${ticker}/ticker`;
     const response = await fetch( url );
-    return response.json();
+    return response.json() as Promise<Ticker>;
 }
 
 // (async () => {
