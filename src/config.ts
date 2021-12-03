@@ -14,6 +14,7 @@ export const rpc: any = new JsonRpc(process.env.NODEOS_ENDPOINT || '', { fetch: 
 export const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
 // settings
+export const CRON_INTERVAL = process.env.CRON_INTERVAL || '* * * * *';
 export const ACCOUNT = process.env.ACCOUNT;
 export const PERMISSION = process.env.PERMISSION;
 export const AUTHORIZATION: Authorization = { actor: ACCOUNT, permission: PERMISSION };

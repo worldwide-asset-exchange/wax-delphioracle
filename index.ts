@@ -2,9 +2,10 @@ import { CronJob } from "cron"
 import { get_ticker } from "./plugins/bittrex"
 import { Quote, write } from "./plugins/delphioracle"
 import { transact } from "./src/utils";
-import { api, ACCOUNT, AUTHORIZATION } from "./src/config";
+import { api, CRON_INTERVAL, ACCOUNT, AUTHORIZATION } from "./src/config";
 
-new CronJob("* * * * *", async () => {
+console.log(`Starting cron job with interval ${CRON_INTERVAL}`);
+new CronJob(CRON_INTERVAL, async () => {
     const usd = await get_ticker("WAXP-USD");
 
     const quotes: Quote[] = [
