@@ -23,6 +23,7 @@ COPY .env.example ecosystem.config.js tsconfig.json index.ts ./
 
 VOLUME [ "/app" ]
 
+ENV CRON_INTERVAL="*/1 * * * *"
 ENV NODEOS_ENDPOINT="https://wax.eosn.com"
 ENV PRIVATE_KEYS="<PRIVATE KEY>"
 ENV ACCOUNT="<ACCOUNT>"
