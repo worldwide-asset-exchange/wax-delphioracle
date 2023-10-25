@@ -12,8 +12,8 @@ new CronJob(CRON_INTERVAL, async () => {
 
     const quotes: Quote[] = [
         { pair: "waxpusd", value: to_uint(usd.lastTradeRate, 4)},
-        { pair: "usdcusd", value: to_uint(usdcusd.lastTradeRate, 6)},
-        { pair: "usdtusd", value: to_uint(usdtusd.lastTradeRate, 6)}
+        { pair: "usdcusd", value: to_uint(usdcusd.lastTradeRate, 4)},
+        { pair: "usdtusd", value: to_uint(usdtusd.lastTradeRate, 4)}
     ]
     await transact( api, [ write( ACCOUNT, quotes, [ AUTHORIZATION ] )]);
 
