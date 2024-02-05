@@ -2,8 +2,8 @@
 
 ## Price feeds
 
-- Bittrex: [WAXP/USD](https://api.bittrex.com/v3/markets/WAXP-USD/ticker)
-- Bittrex: [WAXP/BTC](https://api.bittrex.com/v3/markets/WAXP-BTC/ticker)
+- Coinbase: [WAXP/USD](https://api.coinbase.com/v2/prices/WAXP-USD/buy)
+- Coinmarketcap: [WAXP/BTC](https://pro-api.coinmarketcap.com/v2/tools/price-conversion?symbol=WAXP&amount=1&convert=BTC)
 
 ## `.env` settings
 
@@ -12,6 +12,7 @@ NODEOS_ENDPOINT="https://wax.eosn.com"
 PRIVATE_KEYS="<PRIVATE KEY>"
 ACCOUNT="<ACCOUNT>"
 PERMISSION="<PERMISSION>"
+PRICE_SOURCE=<coinbase or coinmarketcap>
 ```
 
 ## Install
